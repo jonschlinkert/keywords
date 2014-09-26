@@ -1,7 +1,7 @@
 {
   "name": "keywords",
   "description": "CLI utility for normalizing, adding and removing keywords from package.json.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/keywords",
   "author": {
     "name": "Jon Schlinkert",
@@ -33,7 +33,7 @@
   ],
   "preferGlobal": true,
   "bin": {
-    "keywords": "./bin/keywords"
+    "keywords": "./cli.js"
   },
   "main": "index.js",
   "engines": {
