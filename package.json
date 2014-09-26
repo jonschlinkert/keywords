@@ -1,6 +1,6 @@
 {
   "name": "keywords",
-  "description": "CLI utility for easily adding keywords to package.json.",
+  "description": "CLI utility for normalizing, adding and removing keywords from package.json.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/keywords",
   "author": {
