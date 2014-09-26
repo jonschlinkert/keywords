@@ -21,8 +21,15 @@
     }
   ],
   "keywords": [
+    "add",
     "cli",
-    "command line"
+    "command",
+    "keys",
+    "keyword",
+    "keywords",
+    "line",
+    "package",
+    "pkg"
   ],
   "preferGlobal": true,
   "bin": {
@@ -36,6 +43,7 @@
     "test": "mocha -R test"
   },
   "dependencies": {
+    "arr-diff": "^0.1.0",
     "minimist": "~0.0.8",
     "verbalize": "~0.1.1"
   },

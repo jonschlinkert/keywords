@@ -4,28 +4,38 @@
 
 var fs = require('fs');
 var path = require('path');
+var diff = require('arr-diff');
 var log = require('verbalize');
-var del = require('delete');
 var argv = require('minimist')(process.argv.slice(2));
-
 var localPkg = path.join(process.cwd(), 'package.json');
+var keywords = require('./');
 var pkg = require(localPkg);
 
-var keywords = require('./');
+log.runner = 'keywords';
 
 var add = argv.add || argv.a || argv._;
-var omit = argv.omit || argv.o;
+var remove = argv.remove || argv.r;
+
+var addMsg;
+var removeMsg;
 
 if (typeof add === 'string') {
   add = add.split(',');
 }
 
-if (typeof omit === 'string') {
-  omit = omit.split(',');
+if (typeof remove === 'string') {
+  remove = remove.split(',');
 }
 
-pkg.keywords = keywords(add, omit);
+console.log();
 
-// del(path.join(process.cwd(), 'package.json'));
-fs.writeFileSync(localPkg, pkg);
-// console.log(pkg)
+if (add && add.length) {
+  log.inform('adding', add);
+}
+if (remove && remove.length) {
+  log.inform('removing', remove);
+}
+
+pkg.keywords = keywords(add, remove);
+fs.writeFileSync(localPkg, JSON.stringify(pkg, null, 2));
+log.success('  Done.');
