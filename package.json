@@ -1,7 +1,7 @@
 {
   "name": "keywords",
   "description": "CLI utility for normalizing, adding and removing keywords from package.json.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/jonschlinkert/keywords",
   "author": {
     "name": "Jon Schlinkert",
@@ -45,6 +45,7 @@
   "dependencies": {
     "arr-diff": "^0.1.0",
     "minimist": "~0.0.8",
+    "normalize-keywords": "^0.1.0",
     "verbalize": "~0.1.1"
   },
   "devDependencies": {
